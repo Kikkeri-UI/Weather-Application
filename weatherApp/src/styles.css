@@ -79,6 +79,11 @@ align-items: center;
     font-size: 4em;
     font-weight: 900;
 }
+.description{
+    color: var(--white);
+    text-align: center;
+    font-size: 1em;
+}
 .more-info-label{
     color: var(--white);
 }
@@ -127,7 +132,7 @@ align-items: center;
     border: none;
     border-radius: 20px;
     padding: 1 em;
-    color: var(--grey-1);
+    color: var(--white);
     font-size: 0.8em;
     text-align: center;
     height: 40px;
