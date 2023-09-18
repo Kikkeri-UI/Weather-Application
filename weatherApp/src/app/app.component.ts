@@ -12,7 +12,7 @@ import { ToastrService } from 'ngx-toastr';
 export class AppComponent implements OnInit {
 
 
-constructor(private weatherService:WeatherService, private toastr:ToastrService){}
+constructor(private weatherService:WeatherService){}
   weatherData?:WeatherData;
   cityName:string='London';
 
@@ -30,7 +30,7 @@ constructor(private weatherService:WeatherService, private toastr:ToastrService)
     .subscribe({
       
       next :(response)=>{
-        if(response){
+        
           this.weatherData=response;
         let icon=response.weather[0].icon;
         let iconUrl="http://openweathermap.org/img/w/" + icon + ".png";
@@ -38,12 +38,6 @@ constructor(private weatherService:WeatherService, private toastr:ToastrService)
         console.log(iconUrl);
         console.log(icon);
         console.log(response);
-        }
-        else{
-          this.toastr.info('something wrong please try leater');
-        }
-        
-
       },
       
     });
